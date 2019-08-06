@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('survey-one', 'SurveyOneController@surveyOne');
+Route::post('survey-one', ['as'=>'surveyone.store','uses'=>'SurveyOneController@surveyOnePost']);
